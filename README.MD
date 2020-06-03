@@ -1,3 +1,6 @@
+# stop apache server for free 80 port
+sudo /etc/init.d/apache2 stop
+
 # создать образ
 docker build -t ft_server .
 
