@@ -48,6 +48,8 @@ RUN chmod -R 777 /var/www/
 COPY srcs/nginx/localhost.crt /etc/ssl/certs/
 COPY srcs/nginx/localhost.key /etc/ssl/certs/
 
+COPY srcs/autoindex.sh /
+RUN chmod 777 autoindex.sh
 COPY srcs/run.sh /
 RUN chmod 777 run.sh
 ENTRYPOINT ["./run.sh"]
